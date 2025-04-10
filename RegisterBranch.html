@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e9f0f5;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+    }
+
+    .gender-group,
+    .languages-group {
+      margin-top: 10px;
+    }
+
+    .gender-group input,
+    .languages-group input {
+      margin-right: 10px;
+      margin-left: 5px;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .note {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Student Registration Form</h2>
+    <form action="#" method="post">
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label>Gender</label>
+      <div class="gender-group">
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male" style="display:inline;">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female" style="display:inline;">Female</label>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other" style="display:inline;">Other</label>
+      </div>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="10-digit number" required>
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" placeholder="Your full address" required></textarea>
+
+      <label for="branch">Branch / Department</label>
+      <input type="text" id="branch" name="branch" placeholder="e.g. Computer Science" required>
+
+      <label for="year">Year of Study</label>
+      <select id="year" name="year" required>
+        <option value="">-- Select Year --</option>
+        <option value="1st Year">1st Year</option>
+        <option value="2nd Year">2nd Year</option>
+        <option value="3rd Year">3rd Year</option>
+        <option value="Final Year">Final Year</option>
+      </select>
+
+      <label>No. of Languages You Know</label>
+      <input type="text" id="languages" name="languages" placeholder="e.g. 3">
+
+      <label>List Languages You Know</label>
+      <div class="languages-group">
+        <input type="checkbox" id="c" name="known_languages" value="C">
+        <label for="c" style="display:inline;">C</label>
+
+        <input type="checkbox" id="cpp" name="known_languages" value="C++">
+        <label for="cpp" style="display:inline;">C++</label>
+
+        <input type="checkbox" id="java" name="known_languages" value="Java">
+        <label for="java" style="display:inline;">Java</label>
+
+        <input type="checkbox" id="python" name="known_languages" value="Python">
+        <label for="python" style="display:inline;">Python</label>
+
+        <input type="checkbox" id="js" name="known_languages" value="JavaScript">
+        <label for="js" style="display:inline;">JavaScript</label>
+      </div>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+    <div class="note">Thank you for registering. We’ll contact you soon!</div>
+  </div>
+
+</body>
+</html>
+
